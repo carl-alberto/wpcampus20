@@ -181,7 +181,7 @@ define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = getenv( 'DB_PREFIX' ) !== false ? getenv( 'DB_PREFIX' ) : 'wp_';
+$table_prefix = getenv( 'DB_PREFIX' ) !== false ? getenv( 'DB_PREFIX' ) : 'cms01_';
 
 /* That's all, stop editing! Happy blogging. */
 
