@@ -25,6 +25,7 @@
     "wpackagist-plugin/pantheon-advanced-page-cache": "dev-trunk",
     "wpackagist-plugin/wp-native-php-sessions": "dev-trunk",
 	"wpackagist-plugin/ninja-forms": "dev-trunk",
+	"wpackagist-plugin/wordpress-seo": "dev-trunk",
     "wpackagist-theme/twentynineteen": "^1.2"
   },
   "require-dev": {
