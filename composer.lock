@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6385022b40bbf6e71dc5eb6bcc27bc37",
+    "content-hash": "e4259500b1f6e8f772928a3db0df4dae",
     "packages": [
         {
             "name": "composer/installers",
@@ -662,6 +662,44 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/pantheon-advanced-page-cache/",
             "time": "2023-04-06T14:37:49+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.zip?timestamp=1680265248"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/",
+            "time": "2023-03-31T12:20:48+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/wp-crontrol",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-crontrol/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-crontrol.zip?timestamp=1678902948"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-crontrol/",
+            "time": "2023-03-15T17:55:48+00:00"
         },
         {
             "name": "wpackagist-plugin/wp-native-php-sessions",
@@ -7025,6 +7063,8 @@
         "wpackagist-plugin/pantheon-advanced-page-cache": 20,
         "wpackagist-plugin/wp-native-php-sessions": 20,
         "wpackagist-plugin/ninja-forms": 20,
+        "wpackagist-plugin/wordpress-seo": 20,
+        "wpackagist-plugin/wp-crontrol": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
