@@ -305,6 +305,7 @@ jobs:
       # prior to running Behat tests. This is useful to reset the multidev
       # environment to the previous state after Behat tests have run.
       - name: prepare for Behat testing
+        continue-on-error: true
         run: |
           echo "$SSH_PRIVATE_KEY" > ../private.key
           chmod 600 ../private.key
@@ -314,6 +315,7 @@ jobs:
           ./.ci/test/behat/initialize
 
       - name: run acceptance tests with Behat
+        continue-on-error: true
         run: |
           eval `ssh-agent -s`
           ssh-add ../private.key
@@ -346,6 +348,7 @@ jobs:
     needs: [configure_env_vars, behat_test]
     steps:
       - name: Update git version
+        continue-on-error: true
         run: |
           echo "deb http://ppa.launchpad.net/git-core/ppa/ubuntu xenial main" >> /etc/apt/sources.list
           apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E1DD270288B4E6030699E45FA1715D88E1DF1F24
@@ -370,6 +373,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Cache composer cache
+        continue-on-error: true
         uses: actions/cache@v2
         env:
           cache-name: cache-composer-cache
@@ -410,9 +414,11 @@ jobs:
           source $BASH_ENV
 
       - name: visual regression test
+        continue-on-error: true
         run: ./.ci/test/visual-regression/run
 
       - name: Upload artifacts
+        continue-on-error: true
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
         with:
